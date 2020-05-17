@@ -1,3 +1,3 @@
-FROM ubuntu:18.04
-RUN /bin/bash -c echo 'this is sample'
-ENV myCustomVar = 'this is custom variable'
+FROM tomcat:8
+# Take the war and copy to webapps of tomcat
+COPY target/*.war /usr/local/tomcat/webapps/myweb.warENV myCustomVar = 'this is custom variable'
